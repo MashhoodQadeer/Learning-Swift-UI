@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CC54A66264F312C00AE827A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A65264F312C00AE827A /* AppDelegate.swift */; };
+		4CC54A68264F312C00AE827A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A67264F312C00AE827A /* SceneDelegate.swift */; };
+		4CC54A6A264F312C00AE827A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A69264F312C00AE827A /* HomeScreen.swift */; };
+		4CC54A6D264F312C00AE827A /* EcomeranceApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A6B264F312C00AE827A /* EcomeranceApplication.xcdatamodeld */; };
+		4CC54A6F264F312D00AE827A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC54A6E264F312D00AE827A /* Assets.xcassets */; };
+		4CC54A72264F312D00AE827A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC54A71264F312D00AE827A /* Preview Assets.xcassets */; };
+		4CC54A75264F312D00AE827A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC54A73264F312D00AE827A /* LaunchScreen.storyboard */; };
+		4CC54A80264F312E00AE827A /* EcomeranceApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A7F264F312E00AE827A /* EcomeranceApplicationTests.swift */; };
+		4CC54A8B264F312E00AE827A /* EcomeranceApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A8A264F312E00AE827A /* EcomeranceApplicationUITests.swift */; };
+		4CC61FD4265128ED00CCA18F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC61FD3265128ED00CCA18F /* Product.swift */; };
+		4CC61FD926512AF200CCA18F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC61FD826512AF200CCA18F /* ProductCell.swift */; };
+		4CC61FDE26514D0C00CCA18F /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC61FDD26514D0C00CCA18F /* ProductDetailScreen.swift */; };
+		4CEC9BFD264F378F004F7395 /* Navigationbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC9BFC264F378F004F7395 /* Navigationbar.swift */; };
+		4CEC9C06264F38DF004F7395 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC9C05264F38DF004F7395 /* Values.swift */; };
+		4CEC9C0B264F3FC9004F7395 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC9C0A264F3FC9004F7395 /* Dimension.swift */; };
+		4CEC9C10264F41BC004F7395 /* TabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC9C0F264F41BC004F7395 /* TabbarItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CC54A7C264F312E00AE827A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CC54A5A264F312C00AE827A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC54A61264F312C00AE827A;
+			remoteInfo = EcomeranceApplication;
+		};
+		4CC54A87264F312E00AE827A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CC54A5A264F312C00AE827A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC54A61264F312C00AE827A;
+			remoteInfo = EcomeranceApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CC54A62264F312C00AE827A /* EcomeranceApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcomeranceApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC54A65264F312C00AE827A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CC54A67264F312C00AE827A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4CC54A69264F312C00AE827A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		4CC54A6C264F312C00AE827A /* EcomeranceApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcomeranceApplication.xcdatamodel; sourceTree = "<group>"; };
+		4CC54A6E264F312D00AE827A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CC54A71264F312D00AE827A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CC54A74264F312D00AE827A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CC54A76264F312D00AE827A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC54A7B264F312D00AE827A /* EcomeranceApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcomeranceApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC54A7F264F312E00AE827A /* EcomeranceApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomeranceApplicationTests.swift; sourceTree = "<group>"; };
+		4CC54A81264F312E00AE827A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC54A86264F312E00AE827A /* EcomeranceApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcomeranceApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC54A8A264F312E00AE827A /* EcomeranceApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcomeranceApplicationUITests.swift; sourceTree = "<group>"; };
+		4CC54A8C264F312E00AE827A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC61FD3265128ED00CCA18F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4CC61FD826512AF200CCA18F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		4CC61FDD26514D0C00CCA18F /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
+		4CEC9BFC264F378F004F7395 /* Navigationbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigationbar.swift; sourceTree = "<group>"; };
+		4CEC9C05264F38DF004F7395 /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
+		4CEC9C0A264F3FC9004F7395 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		4CEC9C0F264F41BC004F7395 /* TabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CC54A5F264F312C00AE827A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC54A78264F312D00AE827A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC54A83264F312E00AE827A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CC54A59264F312C00AE827A = {
+			isa = PBXGroup;
+			children = (
+				4CC54A64264F312C00AE827A /* EcomeranceApplication */,
+				4CC54A7E264F312E00AE827A /* EcomeranceApplicationTests */,
+				4CC54A89264F312E00AE827A /* EcomeranceApplicationUITests */,
+				4CC54A63264F312C00AE827A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CC54A63264F312C00AE827A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A62264F312C00AE827A /* EcomeranceApplication.app */,
+				4CC54A7B264F312D00AE827A /* EcomeranceApplicationTests.xctest */,
+				4CC54A86264F312E00AE827A /* EcomeranceApplicationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CC54A64264F312C00AE827A /* EcomeranceApplication */ = {
+			isa = PBXGroup;
+			children = (
+				4CC61FD22651282E00CCA18F /* Models */,
+				4CEC9C04264F38C4004F7395 /* Utilities */,
+				4CEC9BFB264F3773004F7395 /* ViewComponents */,
+				4CC54A9E264F31AB00AE827A /* Screens */,
+				4CC54A9D264F319600AE827A /* Storyboard */,
+				4CC54A9C264F317600AE827A /* Assets */,
+				4CC54A9B264F315300AE827A /* AppDelegates */,
+				4CC54A76264F312D00AE827A /* Info.plist */,
+				4CC54A6B264F312C00AE827A /* EcomeranceApplication.xcdatamodeld */,
+				4CC54A70264F312D00AE827A /* Preview Content */,
+			);
+			path = EcomeranceApplication;
+			sourceTree = "<group>";
+		};
+		4CC54A70264F312D00AE827A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A71264F312D00AE827A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CC54A7E264F312E00AE827A /* EcomeranceApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A7F264F312E00AE827A /* EcomeranceApplicationTests.swift */,
+				4CC54A81264F312E00AE827A /* Info.plist */,
+			);
+			path = EcomeranceApplicationTests;
+			sourceTree = "<group>";
+		};
+		4CC54A89264F312E00AE827A /* EcomeranceApplicationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A8A264F312E00AE827A /* EcomeranceApplicationUITests.swift */,
+				4CC54A8C264F312E00AE827A /* Info.plist */,
+			);
+			path = EcomeranceApplicationUITests;
+			sourceTree = "<group>";
+		};
+		4CC54A9B264F315300AE827A /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A65264F312C00AE827A /* AppDelegate.swift */,
+				4CC54A67264F312C00AE827A /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		4CC54A9C264F317600AE827A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A6E264F312D00AE827A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4CC54A9D264F319600AE827A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A73264F312D00AE827A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4CC54A9E264F31AB00AE827A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4CC54A69264F312C00AE827A /* HomeScreen.swift */,
+				4CC61FDD26514D0C00CCA18F /* ProductDetailScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4CC61FD22651282E00CCA18F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CC61FD3265128ED00CCA18F /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4CEC9BFB264F3773004F7395 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				4CEC9BFC264F378F004F7395 /* Navigationbar.swift */,
+				4CEC9C0F264F41BC004F7395 /* TabbarItem.swift */,
+				4CC61FD826512AF200CCA18F /* ProductCell.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		4CEC9C04264F38C4004F7395 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4CEC9C05264F38DF004F7395 /* Values.swift */,
+				4CEC9C0A264F3FC9004F7395 /* Dimension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CC54A61264F312C00AE827A /* EcomeranceApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC54A8F264F312E00AE827A /* Build configuration list for PBXNativeTarget "EcomeranceApplication" */;
+			buildPhases = (
+				4CC54A5E264F312C00AE827A /* Sources */,
+				4CC54A5F264F312C00AE827A /* Frameworks */,
+				4CC54A60264F312C00AE827A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EcomeranceApplication;
+			productName = EcomeranceApplication;
+			productReference = 4CC54A62264F312C00AE827A /* EcomeranceApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CC54A7A264F312D00AE827A /* EcomeranceApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC54A92264F312E00AE827A /* Build configuration list for PBXNativeTarget "EcomeranceApplicationTests" */;
+			buildPhases = (
+				4CC54A77264F312D00AE827A /* Sources */,
+				4CC54A78264F312D00AE827A /* Frameworks */,
+				4CC54A79264F312D00AE827A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CC54A7D264F312E00AE827A /* PBXTargetDependency */,
+			);
+			name = EcomeranceApplicationTests;
+			productName = EcomeranceApplicationTests;
+			productReference = 4CC54A7B264F312D00AE827A /* EcomeranceApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CC54A85264F312E00AE827A /* EcomeranceApplicationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC54A95264F312E00AE827A /* Build configuration list for PBXNativeTarget "EcomeranceApplicationUITests" */;
+			buildPhases = (
+				4CC54A82264F312E00AE827A /* Sources */,
+				4CC54A83264F312E00AE827A /* Frameworks */,
+				4CC54A84264F312E00AE827A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CC54A88264F312E00AE827A /* PBXTargetDependency */,
+			);
+			name = EcomeranceApplicationUITests;
+			productName = EcomeranceApplicationUITests;
+			productReference = 4CC54A86264F312E00AE827A /* EcomeranceApplicationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CC54A5A264F312C00AE827A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4CC54A61264F312C00AE827A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4CC54A7A264F312D00AE827A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4CC54A61264F312C00AE827A;
+					};
+					4CC54A85264F312E00AE827A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4CC54A61264F312C00AE827A;
+					};
+				};
+			};
+			buildConfigurationList = 4CC54A5D264F312C00AE827A /* Build configuration list for PBXProject "EcomeranceApplication" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CC54A59264F312C00AE827A;
+			productRefGroup = 4CC54A63264F312C00AE827A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CC54A61264F312C00AE827A /* EcomeranceApplication */,
+				4CC54A7A264F312D00AE827A /* EcomeranceApplicationTests */,
+				4CC54A85264F312E00AE827A /* EcomeranceApplicationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CC54A60264F312C00AE827A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC54A75264F312D00AE827A /* LaunchScreen.storyboard in Resources */,
+				4CC54A72264F312D00AE827A /* Preview Assets.xcassets in Resources */,
+				4CC54A6F264F312D00AE827A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC54A79264F312D00AE827A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC54A84264F312E00AE827A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CC54A5E264F312C00AE827A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC54A6D264F312C00AE827A /* EcomeranceApplication.xcdatamodeld in Sources */,
+				4CEC9C06264F38DF004F7395 /* Values.swift in Sources */,
+				4CC61FD4265128ED00CCA18F /* Product.swift in Sources */,
+				4CC54A66264F312C00AE827A /* AppDelegate.swift in Sources */,
+				4CEC9BFD264F378F004F7395 /* Navigationbar.swift in Sources */,
+				4CC61FDE26514D0C00CCA18F /* ProductDetailScreen.swift in Sources */,
+				4CEC9C0B264F3FC9004F7395 /* Dimension.swift in Sources */,
+				4CC54A68264F312C00AE827A /* SceneDelegate.swift in Sources */,
+				4CC61FD926512AF200CCA18F /* ProductCell.swift in Sources */,
+				4CEC9C10264F41BC004F7395 /* TabbarItem.swift in Sources */,
+				4CC54A6A264F312C00AE827A /* HomeScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC54A77264F312D00AE827A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC54A80264F312E00AE827A /* EcomeranceApplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC54A82264F312E00AE827A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC54A8B264F312E00AE827A /* EcomeranceApplicationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CC54A7D264F312E00AE827A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC54A61264F312C00AE827A /* EcomeranceApplication */;
+			targetProxy = 4CC54A7C264F312E00AE827A /* PBXContainerItemProxy */;
+		};
+		4CC54A88264F312E00AE827A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC54A61264F312C00AE827A /* EcomeranceApplication */;
+			targetProxy = 4CC54A87264F312E00AE827A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CC54A73264F312D00AE827A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC54A74264F312D00AE827A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CC54A8D264F312E00AE827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CC54A8E264F312E00AE827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CC54A90264F312E00AE827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"EcomeranceApplication/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = EcomeranceApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ecomerance.app.EcomeranceApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CC54A91264F312E00AE827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"EcomeranceApplication/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = EcomeranceApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ecomerance.app.EcomeranceApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CC54A93264F312E00AE827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EcomeranceApplicationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ecomerance.app.EcomeranceApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcomeranceApplication.app/EcomeranceApplication";
+			};
+			name = Debug;
+		};
+		4CC54A94264F312E00AE827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EcomeranceApplicationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ecomerance.app.EcomeranceApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcomeranceApplication.app/EcomeranceApplication";
+			};
+			name = Release;
+		};
+		4CC54A96264F312E00AE827A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EcomeranceApplicationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ecomerance.app.EcomeranceApplicationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcomeranceApplication;
+			};
+			name = Debug;
+		};
+		4CC54A97264F312E00AE827A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EcomeranceApplicationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ecomerance.app.EcomeranceApplicationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcomeranceApplication;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CC54A5D264F312C00AE827A /* Build configuration list for PBXProject "EcomeranceApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC54A8D264F312E00AE827A /* Debug */,
+				4CC54A8E264F312E00AE827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC54A8F264F312E00AE827A /* Build configuration list for PBXNativeTarget "EcomeranceApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC54A90264F312E00AE827A /* Debug */,
+				4CC54A91264F312E00AE827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC54A92264F312E00AE827A /* Build configuration list for PBXNativeTarget "EcomeranceApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC54A93264F312E00AE827A /* Debug */,
+				4CC54A94264F312E00AE827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC54A95264F312E00AE827A /* Build configuration list for PBXNativeTarget "EcomeranceApplicationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC54A96264F312E00AE827A /* Debug */,
+				4CC54A97264F312E00AE827A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CC54A6B264F312C00AE827A /* EcomeranceApplication.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CC54A6C264F312C00AE827A /* EcomeranceApplication.xcdatamodel */,
+			);
+			currentVersion = 4CC54A6C264F312C00AE827A /* EcomeranceApplication.xcdatamodel */;
+			path = EcomeranceApplication.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CC54A5A264F312C00AE827A /* Project object */;
+}
