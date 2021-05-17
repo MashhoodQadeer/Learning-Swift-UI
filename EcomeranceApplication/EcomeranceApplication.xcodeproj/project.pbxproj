@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5C3C322652FA4D003CBCE6 /* ProductBackgroundShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5C3C312652FA4D003CBCE6 /* ProductBackgroundShape.swift */; };
 		4CC54A66264F312C00AE827A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A65264F312C00AE827A /* AppDelegate.swift */; };
 		4CC54A68264F312C00AE827A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A67264F312C00AE827A /* SceneDelegate.swift */; };
 		4CC54A6A264F312C00AE827A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC54A69264F312C00AE827A /* HomeScreen.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C5C3C312652FA4D003CBCE6 /* ProductBackgroundShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBackgroundShape.swift; sourceTree = "<group>"; };
 		4CC54A62264F312C00AE827A /* EcomeranceApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcomeranceApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC54A65264F312C00AE827A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC54A67264F312C00AE827A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				4CEC9BFC264F378F004F7395 /* Navigationbar.swift */,
 				4CEC9C0F264F41BC004F7395 /* TabbarItem.swift */,
 				4CC61FD826512AF200CCA18F /* ProductCell.swift */,
+				4C5C3C312652FA4D003CBCE6 /* ProductBackgroundShape.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				4CEC9C0B264F3FC9004F7395 /* Dimension.swift in Sources */,
 				4CC54A68264F312C00AE827A /* SceneDelegate.swift in Sources */,
 				4CC61FD926512AF200CCA18F /* ProductCell.swift in Sources */,
+				4C5C3C322652FA4D003CBCE6 /* ProductBackgroundShape.swift in Sources */,
 				4CEC9C10264F41BC004F7395 /* TabbarItem.swift in Sources */,
 				4CC54A6A264F312C00AE827A /* HomeScreen.swift in Sources */,
 			);
