@@ -184,7 +184,4 @@ struct  ProductDetailsScreen : View {
     func isLikedTapped(product: Product){
         product.isLiked.toggle()
     }
-    
 }
-
-
