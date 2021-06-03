@@ -7,31 +7,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var playerData : MusicAlbum =  MusicAlbum()
+    @ObservedObject var playerData : MusicAlbum =  MusicAlbum()
+    @State var widthOffset: CGFloat = 40
+    @State var heightOffset: ( width: CGFloat, height: CGFloat ) = (width: 0, height: 0)
+    @State var trimLavel: CGFloat = 0.8
+    @State var trackIndicator: CGFloat = 25
+    @State var parentSize: GeometryProxy?
+    
     var body: some View {
         VStack{
             GeometryReader { metter in
-                VStack{
-                    ZStack {
-                        Image(uiImage: playerData.album.artwork)
-                            .resizable()
-                            .frame( width: metter.size.width * 0.8, height: metter.size.height * 0.4 )
-                            .clipShape( Circle() )
-                            .aspectRatio(contentMode: .fit)
-                        
-                        //Rotational Effects
-                        ZStack{
-                            Circle()
-                                .trim(from: 0, to: 0.95)
-                                .stroke(Color.black.opacity(0.06), lineWidth: 1.9)
-                                .frame(width: ( metter.size.width * 0.8 ) + 50, height: (metter.size.height * 0.4) + 50, alignment: .center)
-                        }.rotationEffect(.init(degrees: 126))
-                        
-                    }
-                    Spacer()
-                }.frame(width : metter.size.width, height: metter.size.height )
+                MediaPlayerGauge(parentSize: metter, playerData: playerData, sliderIsMoved: self.valueIsSwiped(value:)).frame(width : metter.size.width, height: metter.size.height )
             }
         }
+    }
+    
+    func valueIsSwiped(value : DragGesture.Value){
+         self.playerData.gestureIsChanged(value: value)
     }
     
 }

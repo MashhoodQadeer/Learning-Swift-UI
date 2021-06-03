@@ -14,6 +14,7 @@ class MusicAlbum : ObservableObject {
       @Published var player = try! AVAudioPlayer(contentsOf: url)
       @Published var isPlaying: Bool = false
       @Published var album = Album()
+      @Published var angle: CGFloat = 0
        
       func fetchAlbum(){ //To fetch the album meta information
         let asset = AVAsset(url: player.url!)
@@ -44,6 +45,18 @@ class MusicAlbum : ObservableObject {
             }
             
         }
+      }
+    
+    func gestureIsChanged(value : DragGesture.Value ){
+         let vector = CGVector( dx: value.location.x, dy: value.location.y )
+         let radians = atan2(vector.dy - 12.5, vector.dx - 12.5)
+         let tempAnagle = (radians * 180) / .pi
+         let tempAngle = tempAnagle < 0 ? (360 + tempAnagle) : tempAnagle
+         if tempAngle <= 288 {
+            withAnimation(Animation.linear(duration: 0.1)) {
+                self.angle = tempAngle
+            }
+         }
       }
     
 }
