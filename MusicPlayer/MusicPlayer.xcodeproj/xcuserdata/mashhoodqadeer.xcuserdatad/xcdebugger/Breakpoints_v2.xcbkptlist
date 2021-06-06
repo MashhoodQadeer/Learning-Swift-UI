@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B296C8C4-53DF-409F-B291-620302D8D5B7"
+            uuid = "FF7EC0DA-B7C3-40F9-9138-0C24B8D656B5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MusicPlayer/Screens/ContentView.swift"
+            filePath = "MusicPlayer/ViewModel/MusicAlbum.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "valueIsSwiped(value:)"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "valumeIsChanged(value:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

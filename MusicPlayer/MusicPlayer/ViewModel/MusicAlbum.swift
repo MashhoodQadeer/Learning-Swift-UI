@@ -9,13 +9,20 @@ import AVKit
 
 let url = URL( fileURLWithPath: Bundle.main.path(forResource: "baby", ofType: "mp3")!)
 
-class MusicAlbum : ObservableObject {
-      
+class MusicAlbum : NSObject , ObservableObject, AVAudioPlayerDelegate {
+    
       @Published var player = try! AVAudioPlayer(contentsOf: url)
       @Published var isPlaying: Bool = false
       @Published var album = Album()
       @Published var angle: CGFloat = 0
-       
+      @Published var volumeSize: CGFloat = 2
+      var volumeLength: CGFloat = 0
+  
+      override init() {
+        super.init()
+        self.player.delegate = self
+      }
+  
       func fetchAlbum(){ //To fetch the album meta information
         let asset = AVAsset(url: player.url!)
         asset.metadata.forEach { (meta) in
@@ -55,8 +62,53 @@ class MusicAlbum : ObservableObject {
          if tempAngle <= 288 {
             withAnimation(Animation.linear(duration: 0.1)) {
                 self.angle = tempAngle
+                
+                //Applying the progress
+                let progress = angle / 288
+                let time = TimeInterval(progress) * player.duration
+                player.currentTime = time
+                player.play()
+                withAnimation( Animation.linear(duration: 0.1), {
+                    self.angle = CGFloat(Double(angle))
+                })
             }
          }
+      }
+     
+     func updateTimer(){
+        let currentTime = player.currentTime
+        let total = player.duration
+        let progress = currentTime / total
+        self.isPlaying = self.player.isPlaying
+        withAnimation(Animation.linear(duration:  0.1) ){
+            self.angle = CGFloat(Double(progress) * 288)
+        }
+     }
+     
+    
+    
+    
+      func play(){
+        isPlaying = player.isPlaying
+        if player.isPlaying{player.pause()}
+        else{
+            player.play()
+            self.isPlaying = true
+        }
+      }
+    
+    
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        self.isPlaying = false
+    }
+     
+    
+    func valumeIsChanged(value : DragGesture.Value ){
+        if( value.location.x > -1 && value.location.x < self.volumeLength) {
+            self.volumeSize = value.location.x
+        }
+    
       }
     
 }

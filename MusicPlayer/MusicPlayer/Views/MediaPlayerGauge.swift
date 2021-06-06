@@ -49,8 +49,7 @@ struct MediaPlayerGauge: View {
                 }.rotationEffect(.init(degrees: 126))
                 
             }
-            Spacer()
-        }.frame(width : parentSize.size.width, height: parentSize.size.height ).onAppear(perform: {
+        }.frame(width : parentSize.size.width).onAppear(perform: {
             self.heightOffset = ( width: parentSize.size.width * 0.4, height: parentSize.size.height * 0.3 )
         })
     }
