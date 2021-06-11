@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C8248102673FAC2008DC746 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C82480F2673FAC2008DC746 /* Watch.swift */; };
 		4CE40BF5266D2CB800ED2820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE40BF4266D2CB800ED2820 /* AppDelegate.swift */; };
 		4CE40BF7266D2CB800ED2820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE40BF6266D2CB800ED2820 /* SceneDelegate.swift */; };
 		4CE40BF9266D2CB800ED2820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE40BF8266D2CB800ED2820 /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C82480F2673FAC2008DC746 /* Watch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
 		4CE40BF1266D2CB800ED2820 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE40BF4266D2CB800ED2820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE40BF6266D2CB800ED2820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		4CE40C2F266D2CDF00ED2820 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4C82480F2673FAC2008DC746 /* Watch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				4CE40BF5266D2CB800ED2820 /* AppDelegate.swift in Sources */,
 				4CE40BFC266D2CB800ED2820 /* Watch.xcdatamodeld in Sources */,
 				4CE40BF7266D2CB800ED2820 /* SceneDelegate.swift in Sources */,
+				4C8248102673FAC2008DC746 /* Watch.swift in Sources */,
 				4CE40BF9266D2CB800ED2820 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
