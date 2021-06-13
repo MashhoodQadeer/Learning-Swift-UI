@@ -18,8 +18,10 @@ var watchesList: [Watch] = [
 
 struct ContentView: View {
     
+    @State var showldViewDetail: Bool = false
     @State var categorySelected: String = productGategories[0];
-    @State var selectedWatch: Watch?
+    @State var selectedWatch: Watch = watchesList[0]
+    @Namespace var animtion
     
     func selectedCategory(category : String){
         self.categorySelected = category
@@ -38,84 +40,41 @@ struct ContentView: View {
                         ScrollView(.horizontal, showsIndicators : false){
                                 HStack(spacing: 10){
                                     ForEach( watchesList, id: \.id ) { watch in
-                                    ProductItem(watch: watch)
+                                        ProductItem( watch: watch, addToCart: {
+                                            withAnimation(.spring(), {
+                                                self.showldViewDetail = true
+                                                self.selectedWatch = watch
+                                            })
+                                        }, animation: self.animtion )
                                     }
                                 }.padding(.horizontal, 10)
                             }
                             Spacer()
                     }
                     
-                    VStack( alignment: .leading ){
+                    if( self.selectedWatch != nil && self.showldViewDetail) {
                         
-                        HeaderSection(foregroundColors: .white)
-                        HeaderSubSection(foregroundColors: .white)
-                        Spacer().frame(height : 30)
-                        //Body Content
-                        ZStack{
-                            //For the Title
-                            VStack(alignment :  .leading ){
-                                HStack{
-                                    VStack(alignment: .leading){
-                                        Text("Type")
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                        Text(self.selectedWatch?.title ?? "N/A")
-                                            .font(.caption)
-                                            .foregroundColor(.white).padding(.horizontal,5)
-                                    }
-                                    Spacer()
-                                }
-                                Spacer().frame(height: 15)
-                                VStack(alignment: .leading){
-                                    Text("Color")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                    Text(self.selectedWatch?.color ?? "N/A")
-                                        .font(.caption)
-                                        .foregroundColor(.white).padding(.horizontal,5)
-                                }
-                                Spacer().frame(height: 15)
-                                VStack(alignment: .leading){
-                                    Text("Price")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                    Text(self.selectedWatch?.price ?? "N/A")
-                                        .font(.caption)
-                                        .foregroundColor(.white).padding(.horizontal,5)
-                                }
-                                Spacer()
-                            }.frame( width: meter.size.width)
-                            ZStack{
+                        VStack( alignment: .leading ){
+                            HeaderSection(foregroundColors: .white, backButtonPressed: {
+                                withAnimation( .spring(), {
+                                                                       self.showldViewDetail = false
+                                                                   })
                                 
-                                VStack{
-                                    Spacer()
-                                    VStack(alignment: .leading){
-                                        Text(self.selectedWatch?.title ?? "N/A")
-                                        Text(self.selectedWatch?.description ?? "N/A")
-                                    }.frame( width: meter.size.width).offset(y:35)
-                                    .frame(height: meter.size.height * 0.40)
-                                    .background(Color.white)
-                                    .cornerRadius(30)
-                                }
-                                
-                                VStack{
-                                    HStack(){
-                                        Spacer()
-                                        Image(uiImage: ((self.selectedWatch?.image) ?? UIImage(named: "watch")) ?? UIImage() ).resizable().frame(width: meter.size.width * 0.50, height: meter.size.height * 0.45)
-                                            .rotationEffect(.init(degrees: -15))
-                                    }
-                                        
-                                    Spacer().frame(height: meter.size.height * 0.15)
-                                }
-                                
-                                
-                            }.frame( width: meter.size.width).offset(y:35)
+                            })
+                            HeaderSubSection(foregroundColors: .white)
+                            Spacer()
+                            //Body Content
+
+                            ProductDetail(selectedWatch:  self.selectedWatch, meter: meter, animation: self.animtion )
+
                         }
+                        .frame(height: meter.size.height)
+                        .background(VStack{
+                            Color.black.ignoresSafeArea()
+                        })
                         
-                    }.frame(height: .infinity)
-                    .background(VStack{
-                        Color.black.ignoresSafeArea()
-                    })
+                    }
+                    
                 }
             }
         }
@@ -124,13 +83,89 @@ struct ContentView: View {
     
 }
 
+struct ProductDetail : View {
+    @State var selectedWatch : Watch
+    @State var meter: GeometryProxy
+    var animation : Namespace.ID
+    var body: some View {
+        ZStack{
+            //For the Title
+            VStack(alignment :  .leading ){
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Type")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        Text(self.selectedWatch.title ?? "N/A")
+                            .font(.caption)
+                            .foregroundColor(.white).padding(.horizontal,5)
+                    }
+                    Spacer()
+                }
+                Spacer().frame(height: 15)
+                VStack(alignment: .leading){
+                    Text("Color")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text(self.selectedWatch.color ?? "N/A")
+                        .font(.caption)
+                        .foregroundColor(.white).padding(.horizontal,5)
+                }
+                Spacer().frame(height: 15)
+                VStack(alignment: .leading){
+                    Text("Price")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text(self.selectedWatch.price ?? "N/A")
+                        .font(.caption)
+                        .foregroundColor(.white).padding(.horizontal,5)
+                }
+                Spacer()
+            }.frame( width: meter.size.width)
+            VStack{
+                Spacer()
+                ZStack{
+                    VStack{
+                        Spacer().frame(height: meter.size.height * 0.30)
+                        VStack(alignment: .leading){
+                            Text(self.selectedWatch.title ?? "N/A").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            Text(self.selectedWatch.description ?? "N/A").font(.headline)
+                                .foregroundColor(Color.gray)
+                        }
+                        .padding( .horizontal, 15)
+                        .padding( .vertical, 30)
+                        .frame( width: meter.size.width)
+                        .background(Color.white)
+                        .cornerRadius(30)
+
+                    }
+                    VStack{
+                        HStack(){
+                            Spacer()
+                            Image(uiImage: ((self.selectedWatch.image) ?? UIImage(named: "watch")) ?? UIImage() ).resizable().frame(width: meter.size.width * 0.50, height: meter.size.height * 0.45)
+                                .rotationEffect(.init(degrees: -15))
+                                .matchedGeometryEffect(id: "watch-id\(self.selectedWatch.id)", in: self.animation)
+                        }
+                        Spacer()
+                    }
+                }
+            }.offset(y:35)
+        }
+    }
+}
+
 struct ProductItem : View {
     @State var widthView: CGFloat = 200
     @State var watch: Watch
+    var backButtonPressed: ( () -> Void  )?
+    var addToCart: (() -> Void )?
+    var animation : Namespace.ID
     var body: some View {
         ZStack{
             VStack(alignment: .leading, spacing: 0, content: {
-                Image("watch").resizable().frame(width: self.widthView * 0.85, height: self.widthView * 1.4 )
+                Image(uiImage: ((self.watch.image) ?? UIImage(named: "watch")) ?? UIImage() ).resizable().frame(width: self.widthView * 0.85, height: self.widthView * 1.4 )
+                    .matchedGeometryEffect(id: "watch-id\(self.watch.id)", in: self.animation)
                 Spacer().frame(height: 10)
                 VStack( alignment: .leading, spacing: 0, content: {
                     Text("Classic Black")
@@ -141,9 +176,10 @@ struct ProductItem : View {
                         .font(.title)
                     Spacer().frame(height:10)
                 })
-            }).overlay(Button(action: { }, label: {
+            }).overlay(Button(action: { self.addToCart?()  }, label: {
                 Image(systemName: "plus.circle.fill")
                     .foregroundColor(.orange).font(.title)
+                     
             }).frame(maxWidth: .infinity, maxHeight: .infinity,alignment: .bottomTrailing))
             .padding(.vertical)
             
@@ -162,10 +198,11 @@ struct ProductItem : View {
 
 struct HeaderSection: View {
     var foregroundColors: Color = .black
+    var backButtonPressed: ( () -> Void  )?
     var body: some View {
         HStack{
-            Button(action: {}, label: {
-                Image(systemName: "line.horizontal.3.decrease.circle").foregroundColor(self.foregroundColors)
+            Button(action: {  self.backButtonPressed?() }, label: {
+                Image(systemName: "chevron.backward.2").foregroundColor(self.foregroundColors)
                     .foregroundColor(self.foregroundColors)
                         .frame(width: 30, height: 30)
                         .scaledToFit()

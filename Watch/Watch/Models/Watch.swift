@@ -6,6 +6,7 @@ import UIKit
 
 class Watch : Identifiable {
     
+    var id = UUID().uuidString
     var image: UIImage = UIImage()
     var title: String = ""
     var price: String = ""
