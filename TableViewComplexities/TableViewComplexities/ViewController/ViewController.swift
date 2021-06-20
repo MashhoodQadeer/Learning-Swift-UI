@@ -18,7 +18,7 @@ class ViewController: UIViewController,   UITableViewDelegate, UITableViewDataSo
     func fillDummyData(){
         for i in 0...100 {
             var card: Card = Card(title: "Card Title\(i)", cardFilters: [])
-            for j in 0...200 {
+            for j in 0...10 {
                 card.cardFilters.append(CardFilter( cardFilter: "Card Filter no \(j)"))
             }
             self.cardsList.append(card)

@@ -42,24 +42,14 @@ class CardCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         var flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
          self.collectionView.collectionViewLayout =  flowLayout
          flowLayout.scrollDirection = .vertical
-         flowLayout.estimatedItemSize = CGSize( width: collectionView.frame.width , height: collectionView.frame.height )
+         flowLayout.estimatedItemSize = CGSize( width: collectionView.frame.width , height: 30 )
          self.collectionView.delegate = self
          self.collectionView.dataSource = self
          self.collectionView.register( UINib.init(nibName: String ( describing: CardFilterView.self ) , bundle: nil), forCellWithReuseIdentifier: String ( describing: CardFilterView.self ))
-        
-        self.collectionView.reloadData()
-        self.card!.collectionView =  self.collectionView
-        if( self.card!.filtersViewHeight != 0 ){
-            self.filterLayoutHeight.constant = self.card?.filtersViewHeight ?? 0
+        if(self.isVisible){
+         self.collectionView.reloadData()
         }
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.001, execute: {
-//            if( self.card!.filtersViewHeight == 0 ){
-//                self.card?.filtersViewHeight = self.collectionView.contentSize.height
-//                self.notifyTableView?()
-//            }
-//        })
-        self.collectionView.layoutIfNeeded()
     }
 
     //Collection View Methods
